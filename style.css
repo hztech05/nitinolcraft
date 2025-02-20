@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 /* 导航栏样式 */
@@ -13,10 +14,12 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav h1 {
     margin: 0;
+    font-size: 24px;
 }
 
 nav ul {
@@ -34,6 +37,11 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
 }
 
 /* 子菜单样式 */
@@ -47,6 +55,7 @@ nav ul li ul.sub-menu {
     padding: 0;
     min-width: 150px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
 }
 
 nav ul li:hover ul.sub-menu {
@@ -62,6 +71,7 @@ nav ul li ul.sub-menu li a {
     color: #333;
     text-decoration: none;
     display: block;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li ul.sub-menu li a:hover {
@@ -89,6 +99,26 @@ nav ul li ul.sub-menu li a:hover {
     font-size: 12px;
 }
 
+/* Home 页样式 */
+#home-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+}
+
+#home-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#home-section p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    color: #666;
+}
+
 /* 商品列表样式 */
 .product-list {
     display: flex;
@@ -104,19 +134,29 @@ nav ul li ul.sub-menu li a:hover {
     margin: 10px;
     width: 300px;
     text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.product:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product img {
     max-width: 100%;
     height: auto;
+    margin-bottom: 10px;
 }
 
 .product h2 {
     margin-top: 10px;
+    font-size: 20px;
+    color: #333;
 }
 
 .product p.price {
     font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 15px;
 }
 
 .product button {
@@ -126,6 +166,7 @@ nav ul li ul.sub-menu li a:hover {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .product button:hover {
@@ -153,6 +194,7 @@ nav ul li ul.sub-menu li a:hover {
     width: 80%;
     max-width: 500px;
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .close {
@@ -171,13 +213,21 @@ nav ul li ul.sub-menu li a:hover {
 
 /* 联系方式样式 */
 #contact-section {
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #eee;
 }
 
 #contact-section h2 {
     margin-top: 0;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#contact-section p {
+    margin-bottom: 15px;
+    color: #666;
 }
 
 #contact-section button {
@@ -187,6 +237,7 @@ nav ul li ul.sub-menu li a:hover {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #contact-section button:hover {
