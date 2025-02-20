@@ -1,11 +1,11 @@
-/* È«¾ÖÑùÊ½ */
+/* å…¨å±€æ ·å¼ */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* µ¼º½À¸ÑùÊ½ */
+/* å¯¼èˆªæ æ ·å¼ */
 nav {
     background-color: #333;
     color: white;
@@ -51,7 +51,7 @@ nav ul li a {
     font-size: 12px;
 }
 
-/* ÉÌÆ·ÁĞ±íÑùÊ½ */
+/* å•†å“åˆ—è¡¨æ ·å¼ */
 .product-list {
     display: flex;
     flex-wrap: wrap;
@@ -82,7 +82,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Ä£Ì¬¿òÑùÊ½ */
+/* æ¨¡æ€æ¡†æ ·å¼ */
 .modal {
     display: none;
     position: fixed;
@@ -116,4 +116,31 @@ nav ul li a {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+nav ul li {
+    position: relative;
+}
+
+nav ul li ul.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 0;
+}
+
+nav ul li:hover ul.sub-menu {
+    display: block;
+}
+
+nav ul li ul.sub-menu li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+nav ul li ul.sub-menu li a {
+    text-decoration: none;
+    color: #333;
 }
